@@ -131,6 +131,6 @@ const updateDB = (name, userName, userLevel, userPrestige) => {
     })
 };
 
-app.use(express.static('../dist'))
+app.use(express.static('../build'))
 
 app.listen(port);
