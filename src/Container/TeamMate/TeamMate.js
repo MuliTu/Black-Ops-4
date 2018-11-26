@@ -1,8 +1,9 @@
 import React from 'react'
-import { getUsersData} from "../../Functions/Http";
+import {getUsersData} from "../../Functions/Http";
 import './TeamMate.css'
 import {TableRow} from "./table";
 import {Bar} from "react-chartjs-2";
+import * as firebase from "firebase";
 
 class TeamMate extends React.Component {
     constructor(props) {
@@ -12,22 +13,35 @@ class TeamMate extends React.Component {
             data: [],
             isLoading: false,
             isSuccess: null,
-            size:5
+            size: 5,
+            options: []
         }
     }
 
-    componentDidMount()
-    {
-        setInterval(()=>{this.setState({size: this.state.size +1})},10000)
+    componentWillMount() {
+        firebase.database().ref('/users/').on('value', (snap) => {
+            const users = Object.keys(snap.val()).map(x => Object.assign({name: x}));
+            console.log(users);
+            this.setState({
+                options: users.map(x => x.name)
+            })
+        })
+    }
+
+    componentDidMount() {
+        setInterval(() => {
+            this.setState({size: this.state.size + 1})
+        }, 10000)
     };
 
 
     search = () => {
-        if(this.state.query !== '') {
+        if (this.state.query !== '') {
+            console.log('this is the query',this.state.query);
             getUsersData([this.props.match.params.name, this.state.query]).then(res => {
-                if(res[1].status === 'success'){
+                if (res[1].status === 'success') {
                     this.setState({
-                        isSuccess:true,
+                        isSuccess: true,
                         data: Object.keys(res[1].data.mp.lifetime.all)
                             .map(x => Object.assign({
                                 action: x,
@@ -44,7 +58,7 @@ class TeamMate extends React.Component {
                 }
                 else
                     this.setState({
-                        isSuccess:false
+                        isSuccess: false
                     })
 
             })
@@ -53,14 +67,14 @@ class TeamMate extends React.Component {
 
 
     render() {
-        const temp =this.state.data.filter(x=>(x.myResult !== 0 &&
-            x.friedResult !==0 &&
-            x.myResult <1000 &&
-            x.friedResult <1000 &&
-            x.myResult >1 &&
-            x.friedResult >1));
-        const myData ={
-            labels: temp.map(x=>x.action).slice(this.state.size-5,this.state.size),
+        const temp = this.state.data.filter(x => (x.myResult !== 0 &&
+            x.friedResult !== 0 &&
+            x.myResult < 1000 &&
+            x.friedResult < 1000 &&
+            x.myResult > 1 &&
+            x.friedResult > 1));
+        const myData = {
+            labels: temp.map(x => x.action).slice(this.state.size - 5, this.state.size),
             datasets: [
                 {
                     // type: 'bar',
@@ -68,7 +82,7 @@ class TeamMate extends React.Component {
                     label: this.state.data.myName,
                     backgroundColor: 'rgba(255, 255, 255,0.5)',
                     borderColor: 'rgba(255, 255, 255,0.5)',
-                    data:temp.map(x=>x.friedResult).slice(this.state.size -5,this.state.size),
+                    data: temp.map(x => x.friedResult).slice(this.state.size - 5, this.state.size),
                     steppedLine: false,
                     lineTension: 0.6,
                     pointRadius: 0,
@@ -80,7 +94,7 @@ class TeamMate extends React.Component {
                     label: this.state.data.friendName,
                     backgroundColor: 'rgba(255,140,0)',// orange
                     borderColor: 'rgb(255,140,0)',
-                    data: temp.map(x=>x.myResult).slice(this.state.size -5,this.state.size),
+                    data: temp.map(x => x.myResult).slice(this.state.size - 5, this.state.size),
                     steppedLine: false,
                     lineTension: 0.6,
                     pointRadius: 0,
@@ -95,8 +109,16 @@ class TeamMate extends React.Component {
             <div className={'TeamMate'}>
                 <div className={'TeamMate-wrapper'}>
                     <div className={'TeamMate-search'}>
-                        SearchFriend : <input type='text' onChange={(event) => {this.setState({query: event.target.value})}}/>
-                        <button onClick={() => this.search(this.state.query)}>Click</button>
+
+                        Search Friend :
+                        <select onChange={(event)=>{this.setState({query:event.target.value})}}>
+                            {
+                                this.state.options.map((x, index) => {
+                                    return (<option key={index} >{x}</option>)
+                                })
+                            }
+                        </select>
+                        <button onClick={() => this.search()}>Click</button>
                     </div>
                     {
                         this.state.isSuccess !== null ?
@@ -108,34 +130,34 @@ class TeamMate extends React.Component {
                                             this.state.isLoading ?
                                                 <div className={'table-header'}>
                                                     <div className={'header-item'}/>
-                                                    <div className={'header-item'}>{this.props.match.params.name} VS {this.state.query}</div>
+                                                    <div
+                                                        className={'header-item'}>{this.props.match.params.name} VS {this.state.query}</div>
                                                 </div>
                                                 :
                                                 <div/>}
 
-                                    <Bar
-                                        height={50}
-                                        width={600}
-                                        data={myData}
-                                        redraw={true}
-                                    />
+                                        <Bar
+                                            height={50}
+                                            width={600}
+                                            data={myData}
+                                            redraw={true}
+                                        />
+                                    </div>
+
+
+                                    {
+                                        this.state.isLoading ?
+                                            this.state.data.map((x, index) => {
+                                                return (
+                                                    <div className={'table-wrapper'} key={index}>
+                                                        {TableRow(x.action, x.myResult, x.friedResult, x.friendName)}
+                                                    </div>
+                                                )
+                                            })
+                                            :
+                                            <div>Choose Friend</div>
+                                    }
                                 </div>
-
-
-                                {
-                                    this.state.isLoading ?
-
-                                        this.state.data.map((x,index)=>{
-                                            return(
-                                                <div className={'table-wrapper'} key={index}>
-                                                    {TableRow(x.action,x.myResult,x.friedResult,x.friendName)}
-                                                </div>
-                                            )
-                                        })
-                                        :
-                                        <div>Choose Friend</div>
-                                }
-                            </div>
 
                                 :
                                 <div>Invalid Username</div>
