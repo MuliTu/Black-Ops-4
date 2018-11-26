@@ -66,7 +66,7 @@ class Top extends React.Component {
                         <div className={'right-sub'}>Prestige: {this.state.prestige}</div>
                     </div>
                 </div>
-                <Navigation/>
+                <Navigation {...this.props}/>
             </div>
         );
     }

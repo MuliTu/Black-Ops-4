@@ -4,6 +4,7 @@ import Link from "react-router-dom/es/Link";
 class Navigation extends React.Component {
     constructor(props) {
         super(props);
+        console.log('this is props',props);
         this.state ={
             pages:[
                 {name:'', isClicked:false}
@@ -12,11 +13,13 @@ class Navigation extends React.Component {
     }
 
     componentDidMount(){
+        console.log(this.props.match.params.section);
+
         this.setState({
             pages:[
-                {name:'LifeTime',isClicked: true},
-                {name:'Weekly',isClicked: false},
-                {name:'TeamMates',isClicked: false},
+                {name:'LifeTime',isClicked: this.props.match.params.section === 'LifeTime'.toLowerCase() },
+                {name:'Weekly',isClicked: this.props.match.params.section === 'Weekly'.toLowerCase()},
+                {name:'TeamMates',isClicked: this.props.match.params.section === 'TeamMates'.toLowerCase()},
             ]
         })
     }
