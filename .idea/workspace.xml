@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae6c0661-0d5d-4c6e-a4d5-fb8e33a62e48" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/Graph/Graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/Graph/Graph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/LifeTime/LifeTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/LifeTime/LifeTime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/Top/Top.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/Top/Top.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/WeeklyGraphs/WeeklyGraphs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/WeeklyGraphs/WeeklyGraphs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functions/Functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functions/Functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -74,7 +67,7 @@
           <entry key="html" value="71" />
           <entry key="index" value="130" />
           <entry key="js" value="22433" />
-          <entry key="json" value="189" />
+          <entry key="json" value="192" />
           <entry key="scss" value="63" />
         </counts>
       </usages-collector>
@@ -82,7 +75,7 @@
         <counts>
           <entry key="CSS" value="5054" />
           <entry key="HTML" value="72" />
-          <entry key="JSON" value="189" />
+          <entry key="JSON" value="192" />
           <entry key="JavaScript" value="22430" />
           <entry key="PLAIN_TEXT" value="132" />
           <entry key="SCSS" value="63" />
@@ -142,7 +135,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Container/WeeklyGraphs/WeeklyGraphs.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="181">
@@ -163,11 +156,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="37" column="8" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="8" />
+            <state relative-caret-position="107">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
         </entry>
@@ -245,13 +238,13 @@
         <option value="$PROJECT_DIR$/server/index.js" />
         <option value="$PROJECT_DIR$/build/index.html" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/Functions/Functions.js" />
         <option value="$PROJECT_DIR$/src/Container/Login/Login.js" />
         <option value="$PROJECT_DIR$/src/Container/LifeTime/LifeTime.js" />
         <option value="$PROJECT_DIR$/src/Container/Top/Top.js" />
         <option value="$PROJECT_DIR$/src/Container/Graph/Graph.js" />
         <option value="$PROJECT_DIR$/src/Container/WeeklyGraphs/WeeklyGraphs.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -399,12 +392,12 @@
       <workItem from="1541097255894" duration="20000" />
       <workItem from="1541196708145" duration="600000" />
       <workItem from="1543163511907" duration="4871000" />
-      <workItem from="1543171503080" duration="9087000" />
+      <workItem from="1543171503080" duration="9248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158278000" />
+    <option name="totallyTimeSpent" value="158439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -601,13 +594,6 @@
         <state relative-caret-position="-1179" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="37" column="8" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -706,6 +692,13 @@
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
