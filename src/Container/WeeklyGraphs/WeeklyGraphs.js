@@ -82,7 +82,7 @@ export class WeeklyGraphs extends React.Component {
                         chartList.kills.length > 0 ?
                             Object.keys(chartList).map((x, index) => {
                                 return (
-                                    <div key={index}>
+                                    <div key={index} className={'graph-wrapper'}>
                                         <Graph name={names[index]} dates={times} data={chartList[x]} type={'line'}/>
                                     </div>
                                 )
