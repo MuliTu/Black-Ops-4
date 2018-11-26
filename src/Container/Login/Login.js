@@ -4,6 +4,7 @@ import './Login.css'
 import {Link} from "react-router-dom";
 import {getUsers} from "../../Functions/Functions";
 import * as firebase from "firebase";
+import {Loading} from "../../components/Loading/Loading";
 
 class Login extends React.Component {
     constructor(props) {
@@ -58,7 +59,7 @@ class Login extends React.Component {
                                     )
                                 })
                                 :
-                                <div>No User in list</div>
+                                <Loading/>
 
                         }
 
