@@ -4,6 +4,7 @@ import '../../App.css'
 import {Graph} from "../Graph/Graph";
 import {getUserData, myFetch} from "../../Functions/Http";
 import {Loading} from "../../components/Loading/Loading";
+import * as firebase from "firebase";
 
 export class WeeklyGraphs extends React.Component {
     constructor(props) {
@@ -15,22 +16,38 @@ export class WeeklyGraphs extends React.Component {
 
     componentWillMount() {
         const {name} = this.props.match.params;
-        myFetch(`http://localhost:8000/weekly/${name}`).then(x=>{
-           this.setState({
-               data:
-                   x.map(x => Object.assign({
-                           assists: x.assists,
-                           date: x.date,
-                           ekia: x.ekia,
-                           ekiadRatio: x.ekiadRatio,
-                           kills: x.kills
+        getUserData(name, 'matches').then(res => {
+            const tempData = res.data.matches;
+            const fromAPI = tempData.map(x => Object.assign({
+                assists: x.playerStats.assists,
+                date: x.utcStartSeconds,
+                ekia: x.playerStats.ekia,
+                ekiadRatio: x.playerStats.ekiadRatio,
+                kills: x.playerStats.kills
 
-                       })
-                   )
-               }
-           )
-        })
+            }));
+            firebase.database().ref(`/users/${name}/weekly`).on('value', (snap) => {
+                const dataFromDB = snap.val();
+                if (dataFromDB == null) {
+                    firebase.database().ref(`/users/${name}`).update({
+                        weekly: fromAPI
+                    });
+                }
+                const size = this.arraysEqual(dataFromDB, fromAPI);
+                    this.setState({
+                        data:size
+                    })
+            })
+        });
     }
+
+    arraysEqual = (arraToSave, arrayWithChanges) => {
+        return Object.values(arrayWithChanges.concat(arraToSave).reduce((r, o) => {
+            r[o.date] = o;
+            return r;
+        }, {}));
+
+    };
 
     componentWillUpdate(prevProps) {
         if (this.props !== prevProps.data) {
@@ -49,14 +66,14 @@ export class WeeklyGraphs extends React.Component {
 
     render() {
         const chartList = Object.assign({
-            kills:this.state.data.map(x=>x.kills),
-            ekia:this.state.data.map(x=>x.ekia),
-            assists:this.state.data.map(x=>x.assists),
-            ekiadRatio:this.state.data.map(x=>x.ekiadRatio)
+            kills: this.state.data.map(x => x.kills),
+            ekia: this.state.data.map(x => x.ekia),
+            assists: this.state.data.map(x => x.assists),
+            ekiadRatio: this.state.data.map(x => x.ekiadRatio)
         });
-        console.log('this is keys',Object.keys(chartList));
+        const names= Object.keys(chartList);
         const times = this.state.data.map(x => x.date);
-    console.log(chartList);
+
 
         return (
             <div className={'container'}>
@@ -64,11 +81,10 @@ export class WeeklyGraphs extends React.Component {
                     {
                         chartList.kills.length > 0 ?
                             Object.keys(chartList).map((x, index) => {
-                                console.log('this is x',x);
                                 return (
-                                        <div key={index}>
-                                    <Graph name={'name'} dates={times} data={chartList[x]} type={'line'}/>
-                                </div>
+                                    <div key={index}>
+                                        <Graph name={names[index]} dates={times} data={chartList[x]} type={'line'}/>
+                                    </div>
                                 )
                             })
                             :

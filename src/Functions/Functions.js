@@ -52,3 +52,11 @@ export const getSnapKey = (ref,data) =>{
 
     });
 };
+
+
+export const getUsers = () =>{
+     firebase.database().ref('/users/').on('value', (snap) => {
+         // console.log(Object.keys(snap.val()).map(x => Object.assign({name: x})))
+      return Object.keys(snap.val()).map(x => Object.assign({name: x}));
+    });
+};

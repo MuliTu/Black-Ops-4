@@ -23,6 +23,7 @@ class App extends React.Component {
                         <Route path={'/:name/teammates'} render={(props)=><TeamMate {...props} />}/>
                     </div>
                 </BrowserRouter>
+
             </div>
         );
     }

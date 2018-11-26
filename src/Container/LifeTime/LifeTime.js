@@ -6,7 +6,8 @@ import {Loading} from "../../components/Loading/Loading";
 import './LifeTime.css'
 import '../../App.css'
 import {cardsData, pieData} from "./Data";
-import { myFetch} from "../../Functions/Http";
+import {getUserData, myFetch} from "../../Functions/Http";
+import * as firebase from "firebase";
 
 class LifeTime extends React.Component {
     constructor(props) {
@@ -17,10 +18,17 @@ class LifeTime extends React.Component {
     };
 
 
-    componentWillMount(){
+    componentWillMount() {
         const {name} = this.props.match.params;
-        myFetch(`http://localhost:8000/lifetime/${name}`).then(res => {
-            this.setState({allData: res})
+        getUserData(name).then(res => {
+            const userData = res.data.mp.lifetime.all;
+            firebase.database().ref(`/users/${name}`).update({
+                data: Object.keys(userData).map(x => Object.assign({action: x, result: userData[x]}))
+            },
+                () => firebase.database().ref(`/users/${name}`).on('value', (snap) => {
+                    console.log(snap.val());
+                this.setState({allData:snap.val().data})
+            }));
         });
     }
 

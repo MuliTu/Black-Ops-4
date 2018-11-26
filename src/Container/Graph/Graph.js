@@ -92,7 +92,7 @@ export class Graph extends React.Component {
         const myData = this.createDataForGraph(name, data, dates);
         return (<Bar
             height={400}
-            width={width}
+            width={width - 100}
             data={myData}
             redraw={true}
         />)

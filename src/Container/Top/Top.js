@@ -2,7 +2,8 @@ import React from "react";
 import {getPrestigeImage} from "../../Functions/Functions";
 import './Top.css'
 import Navigation from "../Navigation/Navigation";
-import {myFetch} from "../../Functions/Http";
+import {getUserData, myFetch} from "../../Functions/Http";
+import * as firebase from "firebase";
 
 class Top extends React.Component {
     constructor(props) {
@@ -26,13 +27,27 @@ class Top extends React.Component {
 
     };
 
-    componentDidMount() {
+    componentWillMount() {
+
         const {name} = this.props.match.params;
-        myFetch(`http://localhost:8000/users/${name}`).then(({username, level, prestige}) => {
+        getUserData(name).then(res=>{
+            const userName = res.data.username;
+            const userLevel = res.data.mp.level;
+            const userPrestige = res.data.mp.prestige;
+            firebase.database().ref(`/users/${name}`).update({
+                personal: {
+                    name: userName,
+                    level: userLevel,
+                    prestige: userPrestige
+                },
+            });
+        });
+        firebase.database().ref(`/users/${name}`).on('value', (snap) => {
+            const t = snap.val();
             this.setState({
-                username,
-                level,
-                prestige
+                username:t.personal.name,
+                level:t.personal.level,
+                prestige:t.personal.prestige
             })
         });
     }
