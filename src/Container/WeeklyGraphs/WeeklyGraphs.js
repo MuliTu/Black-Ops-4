@@ -18,7 +18,8 @@ export class WeeklyGraphs extends React.Component {
         const {name} = this.props.match.params;
         getUserData(name, 'matches').then(res => {
             const tempData = res.data.matches;
-            const fromAPI = tempData.map(x => Object.assign({
+            console.log(tempData);
+            const fromAPI = tempData.map(x => Object.create({
                 assists: x.playerStats.assists,
                 date: x.utcStartSeconds,
                 ekia: x.playerStats.ekia,
@@ -49,21 +50,6 @@ export class WeeklyGraphs extends React.Component {
 
     };
 
-    componentWillUpdate(prevProps) {
-        if (this.props !== prevProps.data) {
-        }
-
-    }
-
-    refreshData = () => {
-        const playerName = this.props.match.params.name;
-        getUserData(playerName, 'matches').then(({data}) => {
-
-        });
-
-    };
-
-
     render() {
         const chartList = Object.assign({
             kills: this.state.data.map(x => x.kills),
@@ -83,7 +69,7 @@ export class WeeklyGraphs extends React.Component {
                             Object.keys(chartList).map((x, index) => {
                                 return (
                                     <div key={index} className={'graph-wrapper'}>
-                                        <Graph name={names[index]} dates={times} data={chartList[x]} type={'line'}/>
+                                        <Graph name={names[index]} dates={times.reverse()} data={chartList[x]} type={'line'}/>
                                     </div>
                                 )
                             })

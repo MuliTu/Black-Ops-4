@@ -37,7 +37,6 @@ class TeamMate extends React.Component {
 
     search = () => {
         if (this.state.query !== '') {
-            console.log('this is the query',this.state.query);
             getUsersData([this.props.match.params.name, this.state.query]).then(res => {
                 if (res[1].status === 'success') {
                     this.setState({
@@ -137,7 +136,7 @@ class TeamMate extends React.Component {
                                                 <div/>}
 
                                         <Bar
-                                            height={50}
+                                            height={250}
                                             width={600}
                                             data={myData}
                                             redraw={true}

@@ -1,38 +1,38 @@
 import React from 'react'
 import './Navigation.css'
 import Link from "react-router-dom/es/Link";
+
 class Navigation extends React.Component {
     constructor(props) {
         super(props);
-        console.log('this is props',props);
-        this.state ={
-            pages:[
-                {name:'', isClicked:false}
+        console.log('this is props', props);
+        this.state = {
+            pages: [
+                {name: '', isClicked: false}
             ]
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         console.log(this.props.match.params.section);
 
         this.setState({
-            pages:[
-                {name:'LifeTime',isClicked: this.props.match.params.section === 'LifeTime'.toLowerCase() },
-                {name:'Weekly',isClicked: this.props.match.params.section === 'Weekly'.toLowerCase()},
-                {name:'TeamMates',isClicked: this.props.match.params.section === 'TeamMates'.toLowerCase()},
+            pages: [
+                {name: 'LifeTime', isClicked: this.props.match.params.section === 'LifeTime'.toLowerCase()},
+                {name: 'Weekly', isClicked: this.props.match.params.section === 'Weekly'.toLowerCase()},
+                {name: 'TeamMates', isClicked: this.props.match.params.section === 'TeamMates'.toLowerCase()},
             ]
         })
     }
 
-    changePage= (page) =>{
-      const pagesList = this.state.pages;
-      pagesList.forEach((x=>x.isClicked = false));
-      const index = pagesList.indexOf(page);
-      pagesList[index].isClicked = true;
+    changePage = (page) => {
+        const pagesList = this.state.pages;
+        pagesList.forEach((x => x.isClicked = false));
+        const index = pagesList.indexOf(page);
+        pagesList[index].isClicked = true;
         this.setState({
-            pages:pagesList
-        },()=>console.log(this.state))
-
+            pages: pagesList
+        })
 
 
     };
@@ -59,10 +59,11 @@ class Navigation extends React.Component {
         const {pages} = this.state;
         return (
             <div className={'navigation'}>
-                {pages.map((page,index) =>{
+                {pages.map((page, index) => {
                     return (<div key={index}>
-                        <div style={page.isClicked? inPage : outPage} onClick={()=>this.changePage(page)}>
-                            <Link style={{color:'#fc6621',textDecorationLine:'none'}} to={page.name.toLowerCase()}>{page.name}</Link>
+                        <div style={page.isClicked ? inPage : outPage} onClick={() => this.changePage(page)}>
+                            <Link style={{color: '#fc6621', textDecorationLine: 'none'}}
+                                  to={page.name.toLowerCase()}>{page.name}</Link>
                         </div>
                     </div>)
                 })}

@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae6c0661-0d5d-4c6e-a4d5-fb8e33a62e48" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Container/Graph/Graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/Graph/Graph.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Container/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/Navigation/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/Top/Top.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/Top/Top.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Container/TeamMate/TeamMate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/TeamMate/TeamMate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Container/WeeklyGraphs/WeeklyGraphs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/WeeklyGraphs/WeeklyGraphs.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,7 +42,7 @@
           <entry key="html" value="10" />
           <entry key="ico" value="1" />
           <entry key="index" value="2" />
-          <entry key="js" value="92" />
+          <entry key="js" value="93" />
           <entry key="json" value="5" />
           <entry key="png" value="1" />
           <entry key="rnc" value="2" />
@@ -56,7 +57,7 @@
           <entry key="HTML" value="10" />
           <entry key="Image" value="2" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="85" />
+          <entry key="JavaScript" value="86" />
           <entry key="PLAIN_TEXT" value="9" />
           <entry key="RNG Compact" value="2" />
           <entry key="SCSS" value="1" />
@@ -68,7 +69,7 @@
           <entry key="css" value="5087" />
           <entry key="html" value="71" />
           <entry key="index" value="130" />
-          <entry key="js" value="23251" />
+          <entry key="js" value="23293" />
           <entry key="json" value="192" />
           <entry key="scss" value="63" />
         </counts>
@@ -78,7 +79,7 @@
           <entry key="CSS" value="5087" />
           <entry key="HTML" value="72" />
           <entry key="JSON" value="192" />
-          <entry key="JavaScript" value="23248" />
+          <entry key="JavaScript" value="23290" />
           <entry key="PLAIN_TEXT" value="132" />
           <entry key="SCSS" value="63" />
         </counts>
@@ -110,13 +111,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Container/TeamMate/TeamMate.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1426">
-              <caret line="112" column="31" selection-start-line="112" selection-start-column="31" selection-end-line="112" selection-end-column="31" />
+            <state relative-caret-position="-184">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
-                <element signature="e#5170#5445#0" />
-                <element signature="e#5732#6161#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Container/TeamMate/table.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -124,8 +132,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Container/WeeklyGraphs/WeeklyGraphs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="84" column="65" lean-forward="true" selection-start-line="84" selection-start-column="65" selection-end-line="84" selection-end-column="78" />
+            <state relative-caret-position="201">
+              <caret line="71" column="43" lean-forward="true" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -138,18 +146,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
               <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Container/Navigation/Navigation.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="104" selection-start-line="19" selection-start-column="104" selection-end-line="19" selection-end-column="104" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -187,11 +183,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Container/Graph/Graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
+            <state relative-caret-position="277">
+              <caret line="127" column="24" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -286,13 +282,13 @@
         <option value="$PROJECT_DIR$/src/Container/LifeTime/LifeTime.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/Container/Login/Login.js" />
-        <option value="$PROJECT_DIR$/src/Container/TeamMate/TeamMate.js" />
         <option value="$PROJECT_DIR$/src/Container/Graph/test.css" />
-        <option value="$PROJECT_DIR$/src/Container/WeeklyGraphs/WeeklyGraphs.js" />
-        <option value="$PROJECT_DIR$/src/Container/Graph/Graph.js" />
         <option value="$PROJECT_DIR$/src/Container/WeeklyGraphs/Graph.css" />
         <option value="$PROJECT_DIR$/src/Container/Top/Top.js" />
         <option value="$PROJECT_DIR$/src/Container/Navigation/Navigation.js" />
+        <option value="$PROJECT_DIR$/src/Container/TeamMate/TeamMate.js" />
+        <option value="$PROJECT_DIR$/src/Container/WeeklyGraphs/WeeklyGraphs.js" />
+        <option value="$PROJECT_DIR$/src/Container/Graph/Graph.js" />
       </list>
     </option>
   </component>
@@ -419,18 +415,18 @@
       <workItem from="1541097255894" duration="20000" />
       <workItem from="1541196708145" duration="600000" />
       <workItem from="1543163511907" duration="4871000" />
-      <workItem from="1543171503080" duration="13478000" />
+      <workItem from="1543171503080" duration="15054000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162669000" />
+    <option name="totallyTimeSpent" value="164245000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4940476" visible="true" weight="0.17661242" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4940476" visible="true" weight="0.17661242" />
       <window_info id="Structure" order="1" sideWeight="0.50595236" side_tool="true" weight="0.11452682" />
       <window_info id="npm" order="2" sideWeight="0.50079745" side_tool="true" weight="0.24954791" />
       <window_info id="Favorites" order="3" sideWeight="0.50079745" side_tool="true" weight="0.24954791" />
@@ -444,7 +440,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.51054853" side_tool="true" visible="true" weight="0.36836734" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.48945147" visible="true" weight="0.36836734" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.48945147" visible="true" weight="0.36836734" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -676,18 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Container/TeamMate/TeamMate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1426">
-          <caret line="112" column="31" selection-start-line="112" selection-start-column="31" selection-end-line="112" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <element signature="e#5170#5445#0" />
-            <element signature="e#5732#6161#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Container/Graph/test.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -695,37 +679,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Container/WeeklyGraphs/WeeklyGraphs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="84" column="65" lean-forward="true" selection-start-line="84" selection-start-column="65" selection-end-line="84" selection-end-column="78" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Container/WeeklyGraphs/Graph.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Container/Graph/Graph.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -751,8 +708,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Container/Navigation/Navigation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="104" selection-start-line="19" selection-start-column="104" selection-end-line="19" selection-end-column="104" />
+        <state relative-caret-position="-283">
+          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Container/WeeklyGraphs/Graph.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Container/TeamMate/table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Container/TeamMate/TeamMate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-184">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Container/WeeklyGraphs/WeeklyGraphs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="71" column="43" lean-forward="true" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Container/Graph/Graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="127" column="24" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

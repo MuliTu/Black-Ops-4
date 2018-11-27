@@ -125,7 +125,7 @@ export class Graph extends React.Component {
             avgValue.push(avg / temp.length);
         }
         return {
-            labels: temp.reverse(),
+            labels: temp,
             datasets: [
                 {
                     type: 'line',
