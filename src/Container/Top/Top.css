@@ -6,6 +6,8 @@
 
 }
 .info-section{
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 5px;
     background-color: rgba(0, 0, 0, 0.84);
     display: flex;
@@ -29,6 +31,8 @@
 }
 
 .left {
+    justify-content: space-evenly;
+    align-items: center;
     font-size: 30px;
     flex-basis: 70%;
     margin: 10px;
