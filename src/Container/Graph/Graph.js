@@ -18,13 +18,9 @@ export class Graph extends React.Component {
     }
 
     componentDidMount() {
-        window.addEventListener("resize", this.updateDimensions);
         this.refreshData();
     }
 
-    componentWillUnmount() {
-        window.removeEventListener("resize", this.updateDimensions);
-    }
 
     refreshData = () => {
         this.setState({
@@ -40,20 +36,20 @@ export class Graph extends React.Component {
     getBar = (name, data, dates) => {
         const option = {
             animation: {
-                duration:5000
+                duration: 5000
             },
-            responsive:false,
+            responsive: false,
             maintainAspectRatio: false
         };
         const myData = this.createDataForGraph(name, data, dates);
         return (
-                <Bar
-                    width={1400}
-                    height={400}
-                    data={myData}
-                    redraw={true}
-                    options={option}
-                />)
+            <Bar
+                width={1400}
+                height={400}
+                data={myData}
+                redraw={true}
+                options={option}
+            />)
     };
 
     getPie = (name, data, data2) => {
@@ -61,7 +57,7 @@ export class Graph extends React.Component {
         const myData = this.createDataForPie(name, data, data2);
         return (<Doughnut
             height={250}
-            width={200}
+            width={250}
             data={myData}
             redraw={true}
             options={options}/>)
@@ -89,7 +85,7 @@ export class Graph extends React.Component {
     render() {
         const {data, name, dates} = this.state;
         return (
-            <div >{
+            <div>{
                 this.state.type
                     ?
                     this.state.type.match('line')
@@ -109,13 +105,8 @@ export class Graph extends React.Component {
 
     componentWillMount() {
 
-        this.updateDimensions();
     }
 
-    updateDimensions = () => {
-        this.setState({width: window.innerWidth});
-        this.forceUpdate();
-    };
 
     createDataForGraph = (name, data, dates) => {
         const temp = normalizeDate(dates);

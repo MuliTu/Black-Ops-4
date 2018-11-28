@@ -19,6 +19,7 @@ class Top extends React.Component {
 
     prestigeImage = () => {
         return {
+            width:'300px',
             backgroundImage: `url(${getPrestigeImage(this.state.prestige)})`,
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
@@ -54,14 +55,18 @@ class Top extends React.Component {
 
     render() {
         return (
-            <div className={'top'} style={this.prestigeImage()}>
+            <div className={'top'} >
                 <div className={'info-section'}>
                     <div className={'left'}>
+                        <div>
+                            <img src={getPrestigeImage(this.state.prestige)} style={{width:'120px'}}/>
+                        </div>
                         <div>
                             {this.state.username}
                         </div>
                     </div>
                     <div className={'right'}>
+
                         <div className={'right-sub'}>Level: {this.state.level}</div>
                         <div className={'right-sub'}>Prestige: {this.state.prestige}</div>
                     </div>
