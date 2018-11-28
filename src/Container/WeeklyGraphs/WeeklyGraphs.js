@@ -70,10 +70,7 @@ export class WeeklyGraphs extends React.Component {
 
         return (
             <div className={'container'}>
-                <button onClick={() => {
-                    this.setState({bo: !this.state.bo}, () => this.refreshPage())
-                }}>BlackOPS
-                </button>
+
                 <div className={'graph-container'}>
                     {
                         chartList.kills.length > 0 ?
