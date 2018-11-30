@@ -2,7 +2,7 @@ import {normalizeDate} from "../../Functions/Functions";
 import {Bar, Doughnut} from "react-chartjs-2";
 import React from "react";
 
-const createDataForGraph = (name, data, dates) => {
+const createDataForGraph = (name, data, dates,type) => {
     console.log('this is data from grpah',name, data, dates);
     const temp = normalizeDate(dates);
     const avgValue = [];
@@ -24,10 +24,10 @@ const createDataForGraph = (name, data, dates) => {
                 lineTension: 0.6,
                 pointRadius: 0,
                 pointHitRadius: 10,
-                borderDash: [3],
+                borderDash: [6],
             },
             {
-                type: 'bar',
+                type: type,
                 fill: false,
                 borderDash: [],
                 label: name.toUpperCase(),
@@ -35,7 +35,7 @@ const createDataForGraph = (name, data, dates) => {
                 borderColor: 'rgb(255,140,0)',
                 data: data,
                 lineTension: 0.1,
-                pointRadius: 1,
+                pointRadius: (type === 'line'? 3 : 1),
                 pointHitRadius: 10,
 
             },
@@ -62,7 +62,7 @@ const createDataForPie = (name, data1, data2) => {
     };
 };
 
-export const getBar = (name, data, dates,width = 1400,height =400) => {
+export const getBar = (name, data, dates,width = 1400,height =400,type='bar') => {
     const option = {
         animation: {
             duration: 5000
@@ -70,7 +70,7 @@ export const getBar = (name, data, dates,width = 1400,height =400) => {
         responsive: false,
         maintainAspectRatio: false
     };
-    const myData = createDataForGraph(name, data, dates);
+    const myData = createDataForGraph(name, data, dates,type);
     return (
         <Bar
             width={width}

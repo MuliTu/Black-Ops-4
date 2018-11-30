@@ -83,7 +83,7 @@ class Blackout extends React.Component {
                                     times.length > 0 ?
                                         names.map((x, index) => {
                                             return (<div key={index}>
-                                                {getBar(x, chartList[x], times.reverse(), 1000)}
+                                                {getBar(x, chartList[x], times.reverse(), 1000,400,'line')}
                                             </div>)
                                         })
                                         :
@@ -93,12 +93,12 @@ class Blackout extends React.Component {
                             </div>
                                 {
                                     pieList.map((x, index) => {
-                                        return (<div key={index}>{pieFactory(x.obj1, x.obj2, list)}</div>)
+                                        return (pieFactory(x.obj1, x.obj2, list))
                                     })
                                 }
                                 {
                                     cardList.map((x, index) => {
-                                        return (<div key={index}>{cardFactory(x, list)}</div>)
+                                        return (cardFactory(x, list))
                                     })
                                 }
                         </div>

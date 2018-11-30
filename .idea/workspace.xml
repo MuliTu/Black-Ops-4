@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae6c0661-0d5d-4c6e-a4d5-fb8e33a62e48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Container/Blackout/Blackout.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Container/Blackout/Blackout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Container/Blackout/Data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Container/Graph/GraphFunctions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/Graph/Graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/Graph/Graph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/LifeTime/LifeTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/LifeTime/LifeTime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/Navigation/Navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/Navigation/Navigation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/Navigation/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functions/Functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functions/Functions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functions/Http.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functions/Http.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Container/Blackout/Blackout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/Blackout/Blackout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Container/Graph/GraphFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/Graph/GraphFunctions.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -53,7 +40,7 @@
           <entry key="html" value="11" />
           <entry key="ico" value="1" />
           <entry key="index" value="2" />
-          <entry key="js" value="110" />
+          <entry key="js" value="111" />
           <entry key="json" value="5" />
           <entry key="png" value="1" />
           <entry key="rnc" value="2" />
@@ -68,7 +55,7 @@
           <entry key="HTML" value="11" />
           <entry key="Image" value="2" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="101" />
+          <entry key="JavaScript" value="102" />
           <entry key="PLAIN_TEXT" value="11" />
           <entry key="RNG Compact" value="2" />
           <entry key="SCSS" value="1" />
@@ -80,7 +67,7 @@
           <entry key="css" value="5422" />
           <entry key="html" value="72" />
           <entry key="index" value="130" />
-          <entry key="js" value="26359" />
+          <entry key="js" value="26447" />
           <entry key="json" value="192" />
           <entry key="scss" value="63" />
         </counts>
@@ -90,7 +77,7 @@
           <entry key="CSS" value="5422" />
           <entry key="HTML" value="73" />
           <entry key="JSON" value="192" />
-          <entry key="JavaScript" value="26356" />
+          <entry key="JavaScript" value="26444" />
           <entry key="PLAIN_TEXT" value="132" />
           <entry key="SCSS" value="63" />
         </counts>
@@ -133,10 +120,10 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Container/Blackout/Blackout.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="515">
+                <state relative-caret-position="684">
                   <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
                 </state>
               </provider>
@@ -184,11 +171,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Container/Graph/GraphFunctions.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="303">
-                  <caret line="76" column="26" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
+                <state relative-caret-position="264">
+                  <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
                   <folding>
                     <element signature="e#0#56#0" expanded="true" />
                     <element signature="e#1294#1724#0" />
@@ -231,11 +218,23 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Container/Blackout/Blackout.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="477">
+                <state relative-caret-position="494">
                   <caret line="103" selection-start-line="103" selection-end-line="103" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                     <element signature="e#1077#1320#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Functions/Functions.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-52">
+                  <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+                  <folding>
+                    <element signature="e#0#37#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -345,8 +344,8 @@
         <option value="$PROJECT_DIR$/src/Container/Navigation/Navigation.css" />
         <option value="$PROJECT_DIR$/src/Container/Graph/Graph.js" />
         <option value="$PROJECT_DIR$/src/Functions/Http.js" />
-        <option value="$PROJECT_DIR$/src/Container/Graph/GraphFunctions.js" />
         <option value="$PROJECT_DIR$/src/Container/Blackout/Blackout.css" />
+        <option value="$PROJECT_DIR$/src/Container/Graph/GraphFunctions.js" />
         <option value="$PROJECT_DIR$/src/Container/Blackout/Blackout.js" />
       </list>
     </option>
@@ -503,18 +502,18 @@
       <workItem from="1541196708145" duration="600000" />
       <workItem from="1543163511907" duration="4871000" />
       <workItem from="1543171503080" duration="19129000" />
-      <workItem from="1543384562075" duration="15720000" />
+      <workItem from="1543384562075" duration="16500000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184040000" />
+    <option name="totallyTimeSpent" value="184820000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4940476" visible="true" weight="0.17661242" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4940476" visible="true" weight="0.17661242" />
       <window_info id="Structure" order="1" sideWeight="0.50595236" side_tool="true" weight="0.11452682" />
       <window_info id="npm" order="2" sideWeight="0.50079745" side_tool="true" weight="0.24954791" />
       <window_info id="Favorites" order="3" sideWeight="0.50079745" side_tool="true" weight="0.24954791" />
@@ -528,7 +527,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5111513" side_tool="true" visible="true" weight="0.36836734" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.48884872" visible="true" weight="0.36836734" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.48884872" visible="true" weight="0.36836734" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -729,21 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Functions/Functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <element signature="e#79#206#0" />
-            <element signature="e#250#773#0" />
-            <element signature="e#809#996#0" />
-            <element signature="e#1043#1198#0" />
-            <element signature="e#1240#1664#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Card/Card.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
@@ -825,6 +809,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Functions/Http.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Functions/Functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-52">
+          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Container/WeeklyGraphs/WeeklyGraphs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -835,17 +836,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Functions/Http.js">
+    <entry file="file://$PROJECT_DIR$/src/Container/Blackout/Blackout.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+        <state relative-caret-position="684">
+          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Container/Graph/GraphFunctions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="76" column="26" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
+        <state relative-caret-position="264">
+          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
             <element signature="e#1294#1724#0" />
@@ -853,16 +854,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Container/Blackout/Blackout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Container/Blackout/Blackout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
+        <state relative-caret-position="494">
           <caret line="103" selection-start-line="103" selection-end-line="103" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
