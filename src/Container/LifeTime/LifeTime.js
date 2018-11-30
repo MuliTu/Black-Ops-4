@@ -1,12 +1,10 @@
 import React from 'react'
-import {normalizeNumber} from "../../Functions/Functions";
-import {Card} from "../../components/Card/Card";
-import {Graph} from "../Graph/Graph";
+import {cardFactory, pieFactory} from "../../Functions/Functions";
 import {Loading} from "../../components/Loading/Loading";
 import './LifeTime.css'
 import '../../App.css'
 import {cardsData, pieData} from "./Data";
-import {getUserData, myFetch} from "../../Functions/Http";
+import {getUserData,} from "../../Functions/Http";
 import * as firebase from "firebase";
 
 class LifeTime extends React.Component {
@@ -16,7 +14,6 @@ class LifeTime extends React.Component {
             allData: null,
         }
     };
-
 
     componentWillMount() {
         const {name} = this.props.match.params;
@@ -32,32 +29,6 @@ class LifeTime extends React.Component {
         });
     }
 
-
-    pieFactory = (divider, divided) => {
-        const {allData} = this.state;
-        const obj1 = this.hardFilter(allData, divider);
-        const obj2 = this.hardFilter(allData, divided);
-        return (<div className={'middel'}>
-            <div className={'card-wrapper'}>
-                <Card name={`${obj1.action.toUpperCase()}/${obj2.action.toUpperCase()}`}
-                      text={`Ratio ${normalizeNumber((obj1.result / obj2.result) * 100)}%`}>
-                    <Graph name={'test'} data={obj1} dates={obj2} type={'pie'} size={500}/>
-                </Card>
-            </div>
-        </div>)
-    };
-
-    cardFactory = (cardName) => {
-        const {allData} = this.state;
-        const filterResult = this.hardFilter(allData, cardName);
-        return (<Card
-            name={filterResult.action}>{((filterResult.result % 1) !== 0 ? normalizeNumber(filterResult.result) : filterResult.result)}</Card>)
-    };
-
-    hardFilter = (list, word) => {
-        return list.filter(x => x.action.split(' ').join('') === word)[0]
-    };
-
     render() {
         const list = (this.state.allData !== null ? this.state.allData : []);
         const cardFactoryList = cardsData();
@@ -69,12 +40,12 @@ class LifeTime extends React.Component {
                         <div className={'cards-wrapper'}>
                             {
                                 pieFactorList.map((x, index) => {
-                                    return (<div key={index}>{this.pieFactory(x.obj1, x.obj2)}</div>)
+                                    return (<div key={index}>{pieFactory(x.obj1, x.obj2,list)}</div>)
                                 })
                             }
                             {
                                 cardFactoryList.map((x, index) => {
-                                    return (<div key={index}>{this.cardFactory(x)}</div>)
+                                    return (<div key={index}>{cardFactory(x,list)}</div>)
                                 })
                             }
                         </div>

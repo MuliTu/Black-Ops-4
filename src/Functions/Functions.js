@@ -1,4 +1,7 @@
 import * as firebase from "firebase";
+import {Card} from "../components/Card/Card";
+import {Graph} from "../Container/Graph/Graph";
+import React from "react";
 
 export const normalizeNumber = (num) => {
 
@@ -51,6 +54,34 @@ export const getSnapKey = (ref,data) =>{
         return Object.keys(snap.val())[0];
 
     });
+};
+
+
+
+export const pieFactory = (divider, divided , data) => {
+    const allData = data;
+
+    const obj1 = hardFilter(allData, divider);
+    const obj2 = hardFilter(allData, divided);
+    return (<div className={'middel'}>
+        <div className={'card-wrapper'}>
+            <Card name={`${obj1.action.toUpperCase()}/${obj2.action.toUpperCase()}`}
+                  text={`Ratio ${normalizeNumber((obj1.result / obj2.result) * 100)}%`}>
+                <Graph name={'test'} data={obj1} dates={obj2} type={'pie'} size={500}/>
+            </Card>
+        </div>
+    </div>)
+};
+
+export const cardFactory = (cardName,data) => {
+    const allData =data;
+    const filterResult = hardFilter(allData, cardName);
+    return (<Card
+        name={filterResult.action}>{((filterResult.result % 1) !== 0 ? normalizeNumber(filterResult.result) : filterResult.result)}</Card>)
+};
+
+const hardFilter = (list, word) => {
+    return list.filter(x => x.action.split(' ').join('') === word)[0]
 };
 
 

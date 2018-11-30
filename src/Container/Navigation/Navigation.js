@@ -21,6 +21,7 @@ class Navigation extends React.Component {
                 {name: 'LifeTime', isClicked: this.props.match.params.section === 'LifeTime'.toLowerCase()},
                 {name: 'Weekly', isClicked: this.props.match.params.section === 'Weekly'.toLowerCase()},
                 {name: 'TeamMates', isClicked: this.props.match.params.section === 'TeamMates'.toLowerCase()},
+                {name: 'Blackout', isClicked: this.props.match.params.section === 'Blackout'.toLowerCase()},
             ]
         })
     }

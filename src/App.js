@@ -7,6 +7,7 @@ import Top from "./Container/Top/Top"
 import LifeTime from "./Container/LifeTime/LifeTime";
 import WeeklyGraphs from "./Container/WeeklyGraphs/WeeklyGraphs";
 import TeamMate from "./Container/TeamMate/TeamMate";
+import Blackout from "./Container/Blackout/Blackout.js";
 
 
 class App extends React.Component {
@@ -21,6 +22,7 @@ class App extends React.Component {
                         <Route path={'/:name/lifetime'} render={(props)=><LifeTime {...props} />}/>
                         <Route path={'/:name/weekly'} render={(props)=><WeeklyGraphs {...props} />}/>
                         <Route path={'/:name/teammates'} render={(props)=><TeamMate {...props} />}/>
+                        <Route path={'/:name/blackout'} render={(props)=><Blackout {...props} />}/>
                     </div>
                 </BrowserRouter>
 

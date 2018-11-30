@@ -1,5 +1,5 @@
 .navigation {
     display: flex;
     margin-bottom: -2px;
-
+    flex-wrap: wrap-reverse;
 }

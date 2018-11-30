@@ -1,4 +1,4 @@
-const URL ='https://my.callofduty.com/api/papi-client/crm/cod/v2/title/bo4/platform/xbl/gamer/';
+const URL = 'https://my.callofduty.com/api/papi-client/crm/cod/v2/title/bo4/platform/xbl/gamer/';
 
 
 export const toJson = (data) => {
@@ -9,16 +9,33 @@ export const myFetch = (url) => {
     return fetch(url).then(toJson)
 };
 
-export const getUserData = (username,action='profile',bo=false) => {
+export const getUserData = (username, action = 'profile', bo = false) => {
+    console.log(action);
+    switch (action) {
+        case 'matches':
+            return getUserMatches(username,bo);
+        default:
+            return getUserProfile(username,bo);
 
-    const path = (!action.match('matches')  ? `${URL}${username}/${action}` : `${URL}${username}/${action}/${bo?'wz':'mp'}/start/0/end/0/details` );
-    console.log(path);
-    console.log(`${URL}${username}/${action}/wz/start/0/end/0/details`);
-    return Promise.resolve(myFetch(path))
+    }
 };
 
 
-export const getUsersData = (usersList) =>{
-    console.log('active');
-return Promise.all(usersList.map(user =>{return myFetch(`${URL}${user}/profile`)}))
+export const getUsersData = (usersList) => {
+    return Promise.all(usersList.map(user => {
+        return myFetch(`${URL}${user}/profile`)
+    }))
+};
+
+
+export const getUserProfile = (username, blackout) => {
+    const mainPath  = `${URL}${username}/profile`;
+    const path = (blackout ? `${mainPath}/type/wz`  : mainPath );
+    return Promise.resolve(myFetch(path))
+};
+
+export const getUserMatches = (username, blackout) => {
+    const mainPath  = `${URL}${username}/matches/mp/start/0/end/0/details`;
+    const path = (blackout ? `${mainPath.replace('mp','warzone')}`: mainPath );
+    return Promise.resolve(myFetch(path))
 };

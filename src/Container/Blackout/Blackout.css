@@ -1,0 +1,38 @@
+.blackout {
+    display: flex;
+    flex-wrap: wrap;
+    color: #fc6621;
+    justify-content: center;
+}
+
+.profile {
+    margin: 10px;
+    width: 200px;
+}
+
+.rank {
+    font-size: 4rem;
+    height: 200px;
+    width: 200px;
+    margin: 20px auto auto auto;
+    font-family: "Electrolize", Verdana, Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+.level {
+    height: 190px;
+}
+.weekly {
+    margin: 10px;
+    width: 600px;
+    height: 300px;
+}
+
+.level-label{
+
+    font-size: 30px;
+}
+
+.graph-wrapper{
+    display: flex;
+    flex-direction: column;
+}
