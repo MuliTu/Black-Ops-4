@@ -5,6 +5,7 @@ import {Graph} from "../Graph/Graph";
 import {getUserData, myFetch} from "../../Functions/Http";
 import {Loading} from "../../components/Loading/Loading";
 import * as firebase from "firebase";
+import {getDataFromFB} from "../../Functions/Functions";
 
 export class WeeklyGraphs extends React.Component {
     constructor(props) {
@@ -18,16 +19,14 @@ export class WeeklyGraphs extends React.Component {
         this.refreshPage();
     }
 
-    componentDidMount() {
-        this.refreshPage();
-    }
+
 
     refreshPage = () => {
         const {name} = this.props.match.params;
         getUserData(name, 'matches').then(res => {
             console.log(res);
             const {matches} = res.data;
-            const fromAPI = matches.map(x => Object.create({
+            const fromAPI = matches.map(x => Object.assign({
                 assists: x.playerStats.assists,
                 date: x.utcStartSeconds,
                 ekia: x.playerStats.ekia,
@@ -36,16 +35,20 @@ export class WeeklyGraphs extends React.Component {
             }));
             firebase.database().ref(`/users/${name}/weekly`).on('value', (snap) => {
                 const dataFromDB = snap.val();
-                console.log('this is the result from db',dataFromDB);
-                if (dataFromDB == null) {
+                 if (dataFromDB === null) {
+                    console.log('no data in db');
                     firebase.database().ref(`/users/${name}`).update({
                         weekly: fromAPI
-                    });
+                    }).then(console.log('update complete for',name));
                 }
                 const size = this.arraysEqual(dataFromDB, fromAPI);
-                this.setState({
+                console.log(size);
+                firebase.database().ref(`/users/${name}`).update({
+                    weekly: size
+                },()=>this.setState({
                     data: size
-                })
+                }));
+
             })
         });
     };

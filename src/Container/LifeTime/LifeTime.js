@@ -17,16 +17,18 @@ class LifeTime extends React.Component {
 
     componentWillMount() {
         const {name} = this.props.match.params;
-        getUserData(name).then(res => {
+        getUserData(name).then(
+            res => {
             const userData = res.data.mp.lifetime.all;
+            const userObject = Object.keys(userData).map(x => Object.assign({action: x, result: userData[x]}))
             firebase.database().ref(`/users/${name}`).update({
-                data: Object.keys(userData).map(x => Object.assign({action: x, result: userData[x]}))
-            },
+                data: userObject
+            }
+            ,
                 () => firebase.database().ref(`/users/${name}`).on('value', (snap) => {
-                    console.log(snap.val());
                 this.setState({allData:snap.val().data})
             }));
-        });
+    })
     }
 
     render() {

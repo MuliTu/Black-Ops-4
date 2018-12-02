@@ -4,6 +4,7 @@ import './Top.css'
 import Navigation from "../Navigation/Navigation";
 import {getUserData, myFetch} from "../../Functions/Http";
 import * as firebase from "firebase";
+import Link from "react-router-dom/es/Link";
 
 class Top extends React.Component {
     constructor(props) {
@@ -56,7 +57,13 @@ class Top extends React.Component {
     render() {
         return (
             <div className={'top'} >
+                <button>
+                    <Link to={'/'}>Logout</Link>
+                </button>
+
                 <div className={'info-section'}>
+
+
                     <div className={'left'}>
                         <div>
                             <img src={getPrestigeImage(this.state.prestige)} style={{width:'120px'}}/>

@@ -20,6 +20,7 @@ export const cardsData = () => {
         "headshots",
         "killStreak",
         "revives",
+        "longestDistanceKill",
 
     ]
 };

@@ -1,7 +1,9 @@
+
+
 .App {
     display: flex;
     flex-direction: row;
-    color: #fc6621;
+    color: #fc962a;
     justify-content: center;
     text-align: center;
 
@@ -22,6 +24,6 @@
     text-align: center;
     width: 100%;
     background-color: #101010;
-    border: solid thin #fc6621;
+    border: solid thin #fc962a;
 
 }

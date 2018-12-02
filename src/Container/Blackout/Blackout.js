@@ -93,12 +93,12 @@ class Blackout extends React.Component {
                             </div>
                                 {
                                     pieList.map((x, index) => {
-                                        return (pieFactory(x.obj1, x.obj2, list))
+                                        return (<div key={index}>{pieFactory(x.obj1, x.obj2, list)}</div>)
                                     })
                                 }
                                 {
                                     cardList.map((x, index) => {
-                                        return (cardFactory(x, list))
+                                        return (<div key={index}>{cardFactory(x, list)}</div>)
                                     })
                                 }
                         </div>

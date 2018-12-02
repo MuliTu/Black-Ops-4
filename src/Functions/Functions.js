@@ -5,7 +5,7 @@ import React from "react";
 
 export const normalizeNumber = (num) => {
 
-    return (num.toString().includes('.')?`${num.toString().split('.')[0]}.${num.toString().split('.')[1].slice(0,3)}`:num)
+    return (num.toString().includes('.') ? `${num.toString().split('.')[0]}.${num.toString().split('.')[1].slice(0, 3)}` : num)
 };
 
 export const getPrestigeImage = (num) => {
@@ -27,11 +27,11 @@ export const getPrestigeImage = (num) => {
 };
 
 export const fixName = (name) => {
-return name.split('')[0].toUpperCase() +
-    name.split('').slice(1)
-        .map(letter => (letter === letter.toUpperCase()
-            ? ` ${letter}`
-            : letter)).join('')
+    return name.split('')[0].toUpperCase() +
+        name.split('').slice(1)
+            .map(letter => (letter === letter.toUpperCase()
+                ? ` ${letter}`
+                : letter)).join('')
 };
 
 
@@ -39,28 +39,9 @@ export const normalizeDate = (timeList) => {
     return timeList.map(x => (`${new Date(x * 1000).toLocaleDateString('en-US')} ${new Date(x * 1000).getHours()}:${new Date(x * 1000).getMinutes()}`))
 };
 
-export const getSnapKey = (ref,data) =>{
-    const  userRef=firebase.database().ref(`/users`);
-    userRef.child(`/${ref}`).on('value',(snap)=>{
-        console.log('this is snap',snap.val());
-        if(snap.val() === null){
-            console.log('create data');
-            firebase.database().ref(`/users/${ref}`).push({
-                data:data
-            });
-            return snap.val();
-        }
 
-        return Object.keys(snap.val())[0];
-
-    });
-};
-
-
-
-export const pieFactory = (divider, divided , data) => {
+export const pieFactory = (divider, divided, data) => {
     const allData = data;
-
     const obj1 = hardFilter(allData, divider);
     const obj2 = hardFilter(allData, divided);
     return (<div className={'middel'}>
@@ -73,9 +54,8 @@ export const pieFactory = (divider, divided , data) => {
     </div>)
 };
 
-export const cardFactory = (cardName,data) => {
-    const allData =data;
-    const filterResult = hardFilter(allData, cardName);
+export const cardFactory = (cardName, data) => {
+    const filterResult = hardFilter(data, cardName);
     return (<Card
         name={filterResult.action}>{((filterResult.result % 1) !== 0 ? normalizeNumber(filterResult.result) : filterResult.result)}</Card>)
 };
@@ -85,9 +65,4 @@ const hardFilter = (list, word) => {
 };
 
 
-export const getUsers = () =>{
-     firebase.database().ref('/users/').on('value', (snap) => {
-         // console.log(Object.keys(snap.val()).map(x => Object.assign({name: x})))
-      return Object.keys(snap.val()).map(x => Object.assign({name: x}));
-    });
-};
+

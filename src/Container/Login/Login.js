@@ -31,6 +31,7 @@ class Login extends React.Component {
 
         validateUsername = (username) => {
             getUserData(username).then(results => {
+                console.log(results);
                 this.setState({
                     validate: results.status === 'success',
                     data: results.data,

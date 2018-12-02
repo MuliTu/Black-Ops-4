@@ -1,13 +1,15 @@
 .blackout {
     display: flex;
     flex-wrap: wrap;
-    color: #fc6621;
     justify-content: center;
+    color: #fd8c25;
+
 }
 
 .profile {
     margin: 10px;
-    width: 200px;
+    width: 300px;
+    box-shadow: 1px 1px 10px #fd8c25;
 }
 
 .rank {
